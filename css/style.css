@@ -484,7 +484,10 @@ body:not(.is-loading) .loader { opacity: 0; visibility: hidden; }
 .foot__links, .foot__social { display: flex; flex-wrap: wrap; gap: 28px; }
 .foot a { font: 500 1.1rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; color: var(--steel); }
 .foot a:hover { color: var(--white); }
-.foot__legal { grid-column: 1 / -1; font-size: 0.95rem; color: var(--smoke); }
+.foot__bottom { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.foot__legal, .foot__credit { font-size: 0.95rem; color: var(--smoke); }
+.foot .foot__credit a { font: inherit; text-transform: none; letter-spacing: 0; color: var(--steel); text-decoration: underline; text-underline-offset: 3px; }
+.foot .foot__credit a:hover { color: var(--white); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 960px) {
