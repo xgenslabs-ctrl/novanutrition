@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Nutrition: Protein, Mass Gainer and Creatine</title>
+  <meta name="description" content="Nova Nutrition makes whey protein, mass gainer and creatine for people who train heavy. Find your product, pick your size, or become a distributor.">
+  <link rel="canonical" href="https://novanutritionlabs.com/">
+  <meta property="og:title" content="Nova Nutrition">
+  <meta property="og:description" content="Whey protein, mass gainer and creatine for people who train heavy.">
+  <meta property="og:url" content="https://novanutritionlabs.com/">
+  <meta property="og:image" content="https://novanutritionlabs.com/assets/logo/nova-logo-chrome.png">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="assets/logo/nova-logo-chrome-mark.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  } }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/InertiaPlugin.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body class="is-loading">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="loader" aria-hidden="true">
+    <img class="loader__mark" src="assets/logo/nova-logo-chrome-mark.png" alt="" width="774" height="712">
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <canvas class="tub-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="nav__brand" href="#top" aria-label="Nova Nutrition, back to top">
+      <img src="assets/logo/nova-logo-chrome-mark.png" alt="" width="774" height="712" class="nav__mark">
+      <img src="assets/logo/nova-logo-chrome-wordmark.png" alt="" width="1506" height="134" class="nav__word">
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#range">Products</a>
+      <a href="#sizes">Sizes</a>
+      <a href="#why">Why Nova</a>
+    </nav>
+    <a class="btn btn--small" href="#distributors">Become a distributor</a>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__flare" aria-hidden="true"></div>
+      <h1 class="hero__word"><span aria-hidden="true">NOVA</span><span class="sr">Nova Nutrition: protein, mass gainer and creatine for heavy training</span></h1>
+      <div class="hero__tub" data-tub data-rot="-0.45"></div>
+      <div class="hero__orbit">
+        <div class="hero__ring" aria-hidden="true"></div>
+        <ul class="hero__badges" data-badges></ul>
+        <p class="hero__note" aria-hidden="true">
+          Built for<br>heavy days
+          <svg viewBox="0 0 80 70" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4c4 22 18 44 62 54"/><path d="M54 48l15 10-17 5"/></svg>
+        </p>
+      </div>
+      <div class="hero__copy">
+        <p>Protein, mass gainer and creatine for people who train heavy and eat to grow.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#range">See the products</a>
+          <a class="btn btn--ghost" href="#distributors">Become a distributor</a>
+        </div>
+      </div>
+      <p class="hero__aside">Whey Protein<br>Mass Gainer<br>Creatine</p>
+    </section>
+
+    <!-- SPIN + STATS -->
+    <section class="spin" id="spin" aria-labelledby="spin-title">
+      <div class="spin__sticky">
+        <h2 id="spin-title" class="spin__title">Every scoop<br>measured</h2>
+        <div class="spin__tub" data-tub data-rot="0"></div>
+        <ol class="spin__cards" data-stats></ol>
+        <div class="spin__progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- RANGE -->
+    <section class="range" id="range" aria-labelledby="range-title">
+      <header class="range__head">
+        <h2 id="range-title" class="h2">Pick your fuel</h2>
+        <p class="range__ask">Which one are you?</p>
+      </header>
+
+      <!-- three tubs: the chosen one in the middle travels on to "Choose your size", the two side tubs stay -->
+      <div class="lineup">
+        <button class="lineup__side lineup__side--left" type="button" data-side="0" data-rot="0.6" data-lean="0.06"><span class="sr" data-side-name="0"></span></button>
+        <div class="lineup__main" data-tub data-rot="-0.15"></div>
+        <button class="lineup__side lineup__side--right" type="button" data-side="1" data-rot="-0.6" data-lean="-0.06"><span class="sr" data-side-name="1"></span></button>
+        <p class="lineup__note lineup__note--left" aria-hidden="true">
+          <span data-side-note="0"></span>
+          <svg viewBox="0 0 90 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8c8 2 10 14 18 12 9-2 4-13 13-12 10 1 8 18 20 20 8 1 14-3 20-6"/><path d="M68 14l9 8-11 4"/></svg>
+        </p>
+        <p class="lineup__note lineup__note--right" aria-hidden="true">
+          <span data-side-note="1"></span>
+          <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M44 4c4 22-4 44-30 58"/><path d="M12 48l1 15 14-4"/></svg>
+        </p>
+      </div>
+
+      <div class="range__body">
+        <!-- the travelling tub stops here, beside the details, so it never crosses the text -->
+        <div class="range__slot" data-tub data-rot="-0.4"></div>
+        <div class="range__left">
+        <div class="tabs" role="tablist" aria-label="Products" data-tabs></div>
+        <div class="range__panel" role="tabpanel" id="range-panel" tabindex="0" data-panel>
+          <div class="range__intro">
+            <h3 class="range__name" data-name></h3>
+            <p class="range__flavour" data-flavour></p>
+            <p class="range__blurb" data-blurb></p>
+          </div>
+          <table class="facts">
+            <caption>Supplement facts. Serving size <span data-serving></span></caption>
+            <tbody data-facts></tbody>
+          </table>
+          <a class="btn" href="#distributors">Order wholesale</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIZES -->
+    <section class="sizes" id="sizes" aria-labelledby="sizes-title">
+      <h2 id="sizes-title" class="h2">Choose your size</h2>
+      <p class="sizes__sub">Same formula in every tub. Bigger tubs, more servings.</p>
+      <div class="sizes__tub" data-tub data-rot="0.3"></div>
+      <div class="sizes__options" role="radiogroup" aria-labelledby="sizes-title" data-sizes></div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="compare" id="compare" aria-labelledby="compare-title">
+      <div class="compare__stage">
+        <!-- photo generated in Google Flow; swapped per product by main.js -->
+        <img class="compare__photo-bg" src="assets/images/scoop-chocolate.webp" alt="" aria-hidden="true" loading="lazy" data-scoop-bg>
+        <picture>
+          <source type="image/webp" srcset="assets/images/scoop-chocolate.webp" data-scoop-webp>
+          <img class="compare__photo" src="assets/images/scoop-chocolate.jpg" alt="A steel scoop heaped with protein powder" width="1400" height="1400" loading="lazy" data-scoop-img>
+        </picture>
+        <p class="compare__note" aria-hidden="true" data-scoop-note></p>
+      </div>
+      <div class="compare__body">
+        <h2 id="compare-title" class="compare__title"><span>Built for lifters.</span> See the difference.</h2>
+        <table class="vs">
+          <thead>
+            <tr><th scope="col">What you get</th><th scope="col"><img src="assets/logo/nova-logo-chrome-wordmark.png" alt="Nova Nutrition" width="1506" height="134"></th><th scope="col">Typical supplement</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Every amount printed on the label</th><td class="yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">No proprietary blends</th><td class="yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">Every batch tested</th><td class="yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">Mixes without lumps</th><td class="yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">Short, simple ingredient list</th><td class="yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">Made for heavy training</th><td class="yes">Yes</td><td class="no">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- INSIDE -->
+    <section class="inside" id="inside" aria-labelledby="inside-title">
+      <h2 id="inside-title" class="h2">What it does<br><span data-inside-name></span></h2>
+      <ul class="inside__list" data-benefits></ul>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Train heavy</span><i></i><span>Eat big</span><i></i><span>Recover</span><i></i><span>Repeat</span><i></i>
+        <span>Train heavy</span><i></i><span>Eat big</span><i></i><span>Recover</span><i></i><span>Repeat</span><i></i>
+      </div>
+    </div>
+
+    <!-- WHY -->
+    <section class="why" id="why" aria-labelledby="why-title">
+      <h2 id="why-title" class="h2">Why Nova</h2>
+      <div class="why__grid">
+        <article>
+          <h3>Tested batch by batch</h3>
+          <p>Every production batch is checked for protein content and purity before it leaves the factory.</p>
+        </article>
+        <article>
+          <h3>Labels you can read</h3>
+          <p>Every ingredient and amount is printed on the tub. No hidden blends, no guessing what you are taking.</p>
+        </article>
+        <article>
+          <h3>Made for real training</h3>
+          <p>Three products that cover what lifters actually need: protein, calories and strength. Nothing you don&rsquo;t.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DISTRIBUTORS -->
+    <section class="dist" id="distributors" aria-labelledby="dist-title">
+      <div class="dist__intro">
+        <h2 id="dist-title" class="h2">Stock Nova<br>in your store</h2>
+        <p>Gyms, supplement stores and online shops can sell Nova Nutrition. Send your details and our team will reply with prices and terms.</p>
+      </div>
+      <form class="form" name="distributor" method="POST" data-netlify="true" netlify-honeypot="company-website" data-form>
+        <input type="hidden" name="form-name" value="distributor">
+        <p class="hp"><label>Leave this empty <input name="company-website" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form__row">
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Business name<input name="business" autocomplete="organization" required></label>
+        </div>
+        <div class="form__row">
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Phone <span class="opt">(optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
+        </div>
+        <label>Country and city<input name="location" autocomplete="country-name" required></label>
+        <label>Which products are you interested in?<textarea name="message" rows="4"></textarea></label>
+        <button class="btn" type="submit">Send request</button>
+        <p class="form__status" role="status" aria-live="polite" data-status></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <img src="assets/logo/nova-logo-chrome.png" alt="Nova Nutrition" width="1506" height="846" class="foot__logo" loading="lazy">
+    <nav class="foot__links" aria-label="Footer">
+      <a href="#range">Products</a>
+      <a href="#sizes">Sizes</a>
+      <a href="#why">Why Nova</a>
+      <a href="#distributors">Distributors</a>
+    </nav>
+    <div class="foot__social">
+      <a href="#" aria-label="Nova Nutrition on Instagram">Instagram</a>
+      <a href="#" aria-label="Nova Nutrition on Telegram">Telegram</a>
+    </div>
+    <p class="foot__legal">&copy; <span data-year>2026</span> Nova Nutrition. novanutritionlabs.com</p>
+  </footer>
+</body>
+</html>
