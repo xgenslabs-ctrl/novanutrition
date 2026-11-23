@@ -1,7 +1,10 @@
 # NOVA NUTRITION — Project Notes
 
 ## ⚠️ To do when work resumes (client sends product images)
-- [ ] Footer credit: "Made by ArtLife Web Studio" with a link to the studio site (artlife-studio.uz, confirm the URL)
+- [x] Footer credit: "Made by ArtLife Web Studio" with a link to artlife-studio.uz
+- [ ] When product numbers, flavours or sizes change, update them in **four places**: `js/products.js`, the FAQ section in `index.html`, the JSON-LD in the `<head>` of `index.html`, and `llms.txt`. Bump `lastmod` in `sitemap.xml` and "Last updated" in `llms.txt`.
+- [ ] After launch: add the site to Google Search Console and Bing Webmaster Tools, submit `sitemap.xml`. Add real Instagram/Telegram links to the footer and as `sameAs` in the Organization JSON-LD.
+- [ ] Once prices exist, add `Product` JSON-LD with `offers` (Google flags Product markup without offers, reviews or ratings as invalid).
 - [ ] Put the real product images on the tubs and in the lineup
 - [ ] Client confirms the placeholder content (see below)
 - [ ] Build a clean Netlify deploy folder (leave out NOTES.md, inspiration.md, assets/images/source)

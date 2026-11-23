@@ -442,6 +442,23 @@ body:not(.is-loading) .loader { opacity: 0; visibility: hidden; }
 .why__grid h3 { font: 700 1.8rem/1.1 var(--display); text-transform: uppercase; margin-bottom: 12px; }
 .why__grid p { color: var(--steel); }
 
+/* ---------- faq ---------- */
+.faq { position: relative; z-index: 2; padding: 4vh var(--gutter) 14vh; background: var(--black); }
+.faq__list { max-width: 1000px; margin-top: 6vh; border-bottom: 1px solid var(--line); }
+.faq details { border-top: 1px solid var(--line); }
+.faq summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  padding: 26px 0;
+  font: 700 clamp(1.35rem, 2.2vw, 1.8rem)/1.15 var(--display); text-transform: uppercase;
+  cursor: pointer; list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; flex: none; font: 500 2rem/1 var(--display); color: var(--accent); transition: transform 0.25s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:hover, .faq summary:focus-visible { color: var(--accent); }
+.faq details p { color: var(--steel); max-width: 70ch; padding: 0 0 28px; }
+.faq details a { color: var(--white); }
+
 /* ---------- distributors ---------- */
 .dist {
   position: relative; z-index: 2;

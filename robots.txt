@@ -1,0 +1,5 @@
+# All search engines and AI assistants are welcome to read this site.
+User-agent: *
+Allow: /
+
+Sitemap: https://novanutritionlabs.com/sitemap.xml
